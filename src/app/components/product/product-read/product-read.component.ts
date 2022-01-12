@@ -17,7 +17,6 @@ displayedColumns = ['id', 'name', 'price', 'action']
   ngOnInit(): void {
     this.ProductService.read().subscribe(products => {
       this.products = products
-      console.log(products);      
     })
   }
 }
