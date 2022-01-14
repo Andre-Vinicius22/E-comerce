@@ -1,23 +1,21 @@
-import { ProductService } from './../product.service';
-import { Product } from './../product.model';
 import { Component, OnInit } from '@angular/core';
+import { Product } from './../product.model';
+import { ProductService } from './../product.service';
 
 @Component({
   selector: 'app-product-read',
   templateUrl: './product-read.component.html',
-  styleUrls: ['./product-read.component.scss']
+  styleUrls: ['./product-read.component.scss'],
 })
 export class ProductReadComponent implements OnInit {
+  products!: Product[];
+  displayedColumns = ['id', 'name', 'price', 'action'];
 
-  products!: Product[]; 
-displayedColumns = ['id', 'name', 'price', 'action'] 
-
-  constructor(private ProductService: ProductService) { }
+  constructor(private ProductService: ProductService) {}
 
   ngOnInit(): void {
-    this.ProductService.read().subscribe(products => {
-      this.products = products
-    })
+    this.ProductService.read().subscribe((products) => {
+      this.products = products;
+    });
   }
 }
-
