@@ -1,0 +1,44 @@
+section {
+    display: flex;
+
+    .product-img {
+        justify-content: flex-start;
+        max-height: 4rem;
+        margin-top: 5rem;
+        margin-left: 5rem;
+
+        .mac-img {
+            max-width: 50rem;
+        }
+    }
+
+
+    .product-details {
+        margin-top: 7rem;
+        margin-left: 5rem;
+        width: 40rem;
+
+        i {
+            font-size: 38px;
+            margin: 0.5rem;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 30px;
+            margin-left: 10rem;
+            color: #fff;
+            background-color: green;
+            width: 20rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-0.3rem);
+            }
+        }
+    }
+
+}
