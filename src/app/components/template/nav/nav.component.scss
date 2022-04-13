@@ -1,6 +1,10 @@
 .sidenav {
     background-color: #6b6b6b;
     width: 200px;
+
+    @media (max-width: 500px) {
+        display: none;
+    }
 }
 
 .sidenav a {
